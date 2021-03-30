@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll animation</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0%;
+
+        }
+        h1{
+            margin: 10px;
+         }
+         h2{
+             font-size: 45px;
+         }
+         .box{
+             background-color: steelblue;
+             color: white;
+             display: flex;
+             justify-content: center;
+             margin: 10px;
+             width: 400px;
+             height: 300px;
+             border-radius: 10px;
+             transform: translateX(200%);
+         }
+         .box:nth-of-type(even){
+             transform: translateX(-200%);
+         }
+         
+         .box.show{
+
+            transform: translateX(0);
+         }
+
+
+    </style>
+</head>
+<body>
+    <h1>Scroll to see the animation</h1>
+<div class="box"><h2>content</h2></div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+<div class="box">content</div>
+
+
+<script src ="script 5.js"></script>
+</body>
+</html>

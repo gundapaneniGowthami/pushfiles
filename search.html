@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+</head>
+<body>
+    <input type="text" id ="search" placeholder="search...." >
+    <ul id = list>
+        
+        </ul>
+
+        
+    </ul>
+    <p>There is <span id ="span">1</span> to do</p>
+    <button onclick ="addItem()">Add</button>
+    <button onclick="removeItem()">complete</button>
+    <script>
+
+        
+        function addItem(){
+        var ul=document.getElementById('list')
+        var search = document.getElementById('search');
+        let span =document.getElementById('span')
+        var li=document.createElement('li');
+        li.setAttribute('id', search.value);
+        li.appendChild(document.createTextNode(search.value));
+        ul.appendChild(li);
+
+        
+        }
+
+
+        function removeItem(){
+            var ul =document.getElementById('UL')
+            var search =document.getElementById('search')
+            var item=document.getElementById(search.value)
+            ul.removeChild(item);
+
+    
+            
+        }
+        
+       
+    </script>
+</body>
+</html>

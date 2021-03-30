@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search bar</title>
+</head>
+<body>
+    <input type="text" id ='search' placeholder="search..." onkeyup="searchNames()">
+
+    <ul class="ul">
+        <li class="names">Gowthami</li>
+        <li class="names">Lee</li>
+        <li class="names">Uma</li>
+        <li class="names">Kumari</li>
+        <li class="names">Lakshmi</li>
+    </ul>
+    <script>
+
+        function searchNames(){
+            let search =document.getElementById('search').value.toLowerCase()
+            let name =document.querySelectorAll('.names')
+             
+            for(i=0;i<name.length;i++){
+                if(name[i].innerHTML.toLowerCase().includes(search)){
+                    name[i].style.display ='';
+                }else{
+                    name[i].style.display ='none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

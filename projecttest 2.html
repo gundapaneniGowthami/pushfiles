@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lson comments</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:100px;
+            
+        
+        }
+        .box{
+            background-color: yellow;
+            color: red;
+            width: 700px;
+            height: 150px;
+            border: 3px solid salmon;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+    </div>
+
+
+<script>
+
+
+    const main =document.querySelector('.main');
+    function showJsonData(boxes){
+        main.innerHTML=''
+
+    boxes.forEach(box => {
+        const {postId,id,name,email,body} =box
+
+        const boxEl=document.createElement('div')
+        boxEl.classList.add('box')
+        boxEl.innerHTML =`
+        <div>${postId}</div>
+        <span>${id}</span>
+        <h3>${email}</h3>
+        <div>${body}</div>
+        `
+
+        main.appendChild(boxEl)
+    });
+    }
+
+    const jsonData =() =>{
+     fetch('https://jsonplaceholder.typicode.com/comments/',{
+         
+    headers: {   
+    Accept: 'application/json'
+    }
+})
+.then((response) => response.json())
+.then((data) => {
+     showJsonData(data);
+})
+
+ }
+
+ jsonData()
+</script>
+</body>
+</html>

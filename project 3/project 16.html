@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: darkslategray;
+            margin: 0;
+        }
+        header{
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            background-color: forestgreen;
+        }
+        .search{
+            background-color: transparent;
+            border: 2px solid darkslategray;
+            border-radius: 50px;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            color: white;
+        }
+        .search:focus{
+            outline: none;
+            background-color: darkslategray;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        .movie{
+            width: 300px;
+            margin: 1rem;
+            background-color: forestgreen;
+            box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+        .movie img{
+            width: 100%;
+        }
+        .movie-info{
+            color: ghostwhite;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 1rem;
+            letter-spacing: 0.5px; 
+        }
+
+        .movie-info h3{
+            margin-top: 0;
+        } 
+        .movie-info span{
+            background-color: darkslategray;
+            padding: 0.25rem 0.5rem ;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .movie-info span.green{
+            color: lightseagreen;
+        }
+        .movie-info span.orange{
+            color: orange;
+        }
+        .movie-info span.red{
+            color: red;
+        }
+        .overview{
+            background-color: white;
+            padding: 2rem;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            max-height: 100%;
+            transform: translateY(101%);
+            transition: transform 0.3s ease-in;
+            
+        }
+        .movie:hover .overview{
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <form  id="form">
+            <input type="text" id="search"
+             class="search" placeholder="Search" >
+        </form>
+    </header>
+    <main id="main">
+        <div class="movie">
+            <img src="/html.background/movie seat.jpg" alt="">
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="green">9.8</span>
+            </div>
+            <div class="overview">
+                <h3>overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quas id eum quia quaerat error beatae culpa! Doloribus aperiam fugit illo praesentium ex error tenetur!
+
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/html.background/movie seat.jpg" alt="">
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="orange">6.8</span>
+            </div>
+            <div class="overview">
+                <h3>overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quas id eum quia quaerat error beatae culpa! Doloribus aperiam fugit illo praesentium ex error tenetur!
+
+            </div>
+        </div>
+        <div class="movie">
+            <img src="/html.background/movie seat.jpg" alt="">
+            <div class="movie-info">
+                <h3>Movie Title</h3>
+                <span class="red">3.8</span>
+            </div>
+            <div class="overview">
+                <h3>overview</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quas id eum quia quaerat error beatae culpa! Doloribus aperiam fugit illo praesentium ex error tenetur!
+
+            </div>
+        </div>
+    </main>
+    <script src ="script 16.js"></script>
+</body>
+</html>

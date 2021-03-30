@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wave effect</title>
+    <style>
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: steelblue;
+    color:  white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+    
+
+.container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 40px;
+    border-radius: 5px;
+
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30%;
+}
+.container a{
+    text-decoration: none;
+    color: royalblue;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    background-color: teal;
+    padding: 15px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.80);
+}
+.text{
+    margin-top: 10%;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: block;
+    padding: 15px ;
+    color: thistle;
+}
+.form-control input:focus, .form-control input:valid{
+    outline: 0;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Please Login</h1>
+        <form>
+            <div class="form-control">
+            <input type="text" required>
+            <label>Email</label>
+            </div>  
+            <div class="form-control">
+                <input type="text" required>
+                <label>Password</label>
+                </div>
+                <button class="btn">Login</button>
+                <p class="text"> Don't have account please<a href="#">Register</a></p>
+
+        </form>
+    </div>
+    
+</body>
+</html>

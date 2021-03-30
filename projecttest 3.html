@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json placeholder</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 100px;
+          
+
+        }
+        
+        .box{
+            background-color: tan;
+            width: 800px;
+            height: 200px;
+            padding: 30px 20px;
+            margin-top: 30px;
+            border: 3px solid black;
+            overflow: hidden;
+        }
+        
+            </style>
+</head>
+<body>
+    
+    <div id="main">
+    </div>
+     
+    
+    <script>
+    const main =document.getElementById('main');
+
+
+
+function showData(boxes){
+    main.innerHTML =''
+
+    boxes.forEach((box) => {
+const{username,id,phone,name,company,address} = box 
+ 
+
+
+const boxEl =document.createElement('div')
+boxEl.classList.add('box')
+boxEl.innerHTML =`
+    <div>${username}</div>
+    <span>${id}</span>
+    <div>${phone}</div>
+    <div>${name}</div>
+    <div>${company.name}</div>
+    <div>${company.bs}</div>
+    <div>${address.zipcode}</div>
+
+
+   
+`;
+main.appendChild(boxEl);
+    })
+     
+}
+
+
+
+
+
+
+ const getData =() =>{
+     fetch('https://jsonplaceholder.typicode.com/users',{
+         
+    headers: {   
+    Accept: 'application/json'
+    }
+}).then((response) => response.json())
+.then((data) => {
+    
+     showData(data);
+})
+
+ }
+
+ getData();
+
+
+
+    </script>
+</body>
+</html>

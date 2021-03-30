@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>blur image</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0%;
+            overflow: hidden;
+        }
+        .bg{
+            background: url("/html.background/download\ \(1\).jpg") no-repeat center center/cover;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width:  calc(100vw + 60px) ;
+            height:  calc(100vh + 60px);
+            z-index: -1;
+            filter: blur(0px);
+        }
+        .loading-text{
+
+            font-size: 30px;
+            color: azure;
+        }
+
+    </style>
+</head>
+<body>
+    <section class ="bg"></section>
+    <div class="loading-text">0%</div>
+    <script src="script 4.js"></script>
+</body>
+</html>
